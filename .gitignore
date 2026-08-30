@@ -1,0 +1,13 @@
+# Lazy.nvim
+lazy-lock.json
+
+# Neovim
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Windows
+Thumbs.db
+Desktop.ini
