@@ -1,3 +1,11 @@
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=4C89F8&height=120&section=header"/>
+
+
+![LinkedIn cover - 27](https://github.com/user-attachments/assets/62db7d37-d6ad-450d-9cd1-f3ced029d379)
+
+<br>
+<br>
+
 # minhas_config_NVIM
 
 Configuração completa e profissional do Neovim para desenvolvimento web fullstack — PHP, Java, JavaScript, TypeScript, HTML, CSS, Vue, React e mais.
@@ -984,3 +992,4 @@ Este projeto está sob a licença MIT.
 ---
 
 Feito com ❤️ por Gabriel
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=4C89F8&height=120&section=footer"/>
