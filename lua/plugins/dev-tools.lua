@@ -24,25 +24,6 @@ return {
     end,
   },
   {
-    "rest-nvim/rest.nvim",
-    ft = "http",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    keys = {
-      { "<leader>rr", "<cmd>RestRun<CR>", desc = "Run Request" },
-      { "<leader>rl", "<cmd>RestLast<CR>", desc = "Run Last Request" },
-      { "<leader>rp", "<cmd>RestPreview<CR>", desc = "Preview Request" },
-    },
-    config = function()
-      require("rest-nvim").setup({
-        result = {
-          split = {
-            horizontal = true,
-          },
-        },
-      })
-    end,
-  },
-  {
     "zbirenbaum/copilot.lua",
     event = "InsertEnter",
     opts = {

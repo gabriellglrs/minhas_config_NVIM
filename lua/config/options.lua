@@ -31,4 +31,3 @@ vim.opt.title = true
 vim.opt.titlestring = "%t - Neovim"
 vim.opt.showmode = false
 vim.opt.conceallevel = 0
-vim.opt.fileencoding = "utf-8"

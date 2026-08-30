@@ -85,7 +85,3 @@ map("n", "<leader>td", function() require("neotest").run.run({ strategy = "dap" 
 map("n", "<leader>hw", "<cmd>HopWord<CR>", { desc = "Hop Word" })
 map("n", "<leader>hl", "<cmd>HopLineStart<CR>", { desc = "Hop Line" })
 map("n", "<leader>hp", "<cmd>HopPattern<CR>", { desc = "Hop Pattern" })
-
-map("n", "<leader>rr", "<cmd>RestRun<CR>", { desc = "Run Request" })
-map("n", "<leader>rl", "<cmd>RestLast<CR>", { desc = "Run Last Request" })
-map("n", "<leader>rp", "<cmd>RestPreview<CR>", { desc = "Preview Request" })
