@@ -129,11 +129,4 @@ return {
     "jwalton512/vim-blade",
     ft = "blade",
   },
-  -- Tailwind CSS
-  {
-    "luckasRanison/tailwind-tools.nvim",
-    ft = { "html", "css", "php", "vue", "jsx", "tsx" },
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    opts = {},
-  },
 }
