@@ -8,6 +8,7 @@ return {
         "html", "css", "json", "markdown", "markdown_inline",
         "python", "rust", "go", "bash", "c", "cpp",
         "tsx", "yaml", "toml", "dockerfile", "regex",
+        "php", "java", "vue", "jsx",
       },
       highlight = { enable = true },
       indent = { enable = true },

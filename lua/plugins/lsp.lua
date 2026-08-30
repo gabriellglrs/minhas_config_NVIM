@@ -11,12 +11,25 @@ return {
     },
     opts = {
       ensure_installed = {
+        -- Lua
         "lua_ls",
+        -- JavaScript/TypeScript
         "ts_ls",
+        "eslint",
+        -- HTML/CSS
         "html",
         "cssls",
+        "emmet_ls",
+        -- JSON
         "jsonls",
+        -- Python
         "pyright",
+        -- PHP
+        "phpactor",
+        -- Java
+        "jdtls",
+        -- Markdown
+        "marksman",
       },
       automatic_installation = true,
     },
@@ -44,8 +57,20 @@ return {
         },
       })
 
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      local servers = { "lua_ls", "ts_ls", "html", "cssls", "jsonls", "pyright" }
+      local capabilities = require("cmp_nvim-lsp").default_capabilities()
+      local servers = {
+        "lua_ls",
+        "ts_ls",
+        "eslint",
+        "html",
+        "cssls",
+        "emmet_ls",
+        "jsonls",
+        "pyright",
+        "phpactor",
+        "jdtls",
+        "marksman",
+      }
       for _, lsp in ipairs(servers) do
         vim.lsp.config(lsp, { capabilities = capabilities })
         vim.lsp.enable(lsp)
@@ -68,5 +93,47 @@ return {
         end,
       })
     end,
+  },
+  -- PHP
+  {
+    "StanAngeloff/php.vim",
+    ft = "php",
+  },
+  {
+    "stephpy/vim-php-cs-fixer",
+    ft = "php",
+    cmd = "PhpCsFixer",
+  },
+  -- Java
+  {
+    "mfussenegger/nvim-jdtls",
+    ft = "java",
+  },
+  -- JavaScript/TypeScript extras
+  {
+    "pmizio/typescript-tools.nvim",
+    ft = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+  },
+  -- Emmet (HTML/CSS abbreviations)
+  {
+    "mattn/emmet-vim",
+    ft = { "html", "css", "scss", "php", "vue", "jsx", "tsx" },
+    init = function()
+      vim.g.user_emmet_leader_key = "<C-e>"
+    end,
+  },
+  -- Blade (Laravel)
+  {
+    "jwalton512/vim-blade",
+    ft = "blade",
+  },
+  -- Tailwind CSS
+  {
+    "luckasRanison/tailwind-tools.nvim",
+    ft = { "html", "css", "php", "vue", "jsx", "tsx" },
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {},
   },
 }
