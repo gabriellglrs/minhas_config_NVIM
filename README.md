@@ -18,7 +18,14 @@ Configuração completa e profissional do Neovim para desenvolvimento web fullst
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript)
 
----
+<br>
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/67e65a44-2bbd-4804-98bd-5d9985d18493" />
+<br>
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c7bee5a8-a9d7-4852-b8bf-a89222cc3a63" />
+<br>
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/409cd52c-9f47-4a6a-ac70-5b7236491082" />
+<br>
+
 
 ## 📋 Índice
 
