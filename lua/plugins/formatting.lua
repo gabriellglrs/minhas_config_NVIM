@@ -36,14 +36,6 @@ return {
     },
   },
   {
-    "rshkarin/mason-nvim-lint.nvim",
-    dependencies = {
-      "williamboman/mason.nvim",
-      "mfussenegger/nvim-lint",
-    },
-    opts = {},
-  },
-  {
     "mfussenegger/nvim-lint",
     event = { "BufReadPre", "BufNewFile" },
     config = function()

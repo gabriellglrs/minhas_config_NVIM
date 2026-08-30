@@ -43,16 +43,6 @@ return {
     end,
   },
   {
-    "crispgm/nvim-docker",
-    ft = { "dockerfile", "docker-compose" },
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    config = function()
-      require("nvim-docker").setup({})
-    end,
-  },
-  {
     "zbirenbaum/copilot.lua",
     event = "InsertEnter",
     opts = {

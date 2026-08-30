@@ -7,7 +7,7 @@ return {
       "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
       "marilari88/neotest-vitest",
-      "thenbe/neotest-python",
+      "nvim-neotest/neotest-python",
       "rouge8/neotest-rust",
     },
     keys = {
