@@ -28,6 +28,22 @@ return {
       "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
+      vim.diagnostic.config({
+        virtual_text = { prefix = "●" },
+        signs = true,
+        underline = true,
+        update_in_insert = false,
+        severity_sort = true,
+        float = {
+          focusable = false,
+          style = "minimal",
+          border = "rounded",
+          source = "always",
+          header = "",
+          prefix = "",
+        },
+      })
+
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local servers = { "lua_ls", "ts_ls", "html", "cssls", "jsonls", "pyright" }
       for _, lsp in ipairs(servers) do
