@@ -49,10 +49,6 @@ return {
     },
   },
   {
-    "github/copilot.vim",
-    event = "InsertEnter",
-  },
-  {
     "kdheepak/lazygit.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     cmd = { "LazyGit", "LazyGitConfig" },

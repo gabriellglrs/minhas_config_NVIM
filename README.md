@@ -1,6 +1,6 @@
 # minhas_config_NVIM
 
-Configuração completa e moderna do Neovim para Windows, com LSP, completion, Git, terminal integrado e muito mais.
+Configuração completa e moderna do Neovim para Windows, com LSP, completion, Git, terminal integrado, debugging, testes e muito mais.
 
 ![Neovim](https://img.shields.io/badge/Neovim-0.10+-green?style=flat-square&logo=neovim)
 ![Lua](https://img.shields.io/badge/Lua-5.1-blue?style=flat-square&logo=lua)
@@ -20,15 +20,27 @@ Configuração completa e moderna do Neovim para Windows, com LSP, completion, G
 - 🐙 **Git integrado** - LazyGit + gitsigns
 - 🖥️ **Terminal flutuante** - ToggleTerm
 - 📊 **Barra de status** - Lualine com info de Git
-- 🔔 **Notificações** - nvim-notify
+- 🔔 **Notificações** - nvim-notify + noice.nvim
 - 🎯 **Diagnostics** - Trouble para ver erros
 - 💾 **Sessões** - Persistence para salvar estado
-- 🤖 **Copilot** - Assistente IA
+- 🤖 **Copilot** - Assistente IA com completion
+- 🐛 **Debugger** - nvim-dap com UI
+- 🧪 **Testes** - neotest para rodar testes
+- ✨ **Formatação** - conform.nvim ao salvar
+- 🔍 **Linting** - nvim-lint em tempo real
+- 🔄 **Refactoring** - extrair, renomear, etc
+- 🎯 **Hop** - pular pra qualquer lugar
+- 🌈 **Colorizer** - cores hex/rgb inline
+- 📝 **Markdown Preview** - preview no browser
+- 🗄️ **Database** - dadbod para bancos de dados
+- 🌐 **REST Client** - testar APIs
+- 🐳 **Docker** - suporte Docker
 
 ---
 
 ## 📦 Plugins
 
+### Core
 | Plugin | Descrição |
 |--------|-----------|
 | [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | Configuração LSP |
@@ -37,23 +49,66 @@ Configuração completa e moderna do Neovim para Windows, com LSP, completion, G
 | [LuaSnip](https://github.com/L3MON4D3/LuaSnip) | Snippets engine |
 | [friendly-snippets](https://github.com/rafamadriz/friendly-snippets) | Coleção de snippets |
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Syntax highlight |
+
+### UI
+| Plugin | Descrição |
+|--------|-----------|
 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Busca fuzzy |
 | [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) | Explorer de arquivos |
 | [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | Barra de status |
 | [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | Abas |
-| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Sinais de Git |
 | [which-key.nvim](https://github.com/folke/which-key.nvim) | Menu de atalhos |
 | [catppuccin](https://github.com/catppuccin/nvim) | Tema |
-| [trouble.nvim](https://github.com/folke/trouble.nvim) | Lista de diagnósticos |
-| [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) | TODO/FIX highlight |
-| [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | Terminal integrado |
-| [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim) | Interface Git |
-| [copilot.vim](https://github.com/github/copilot.vim) | Assistente IA |
 | [alpha-nvim](https://github.com/goolord/alpha-nvim) | Tela inicial |
 | [nvim-notify](https://github.com/rcarriga/nvim-notify) | Notificações |
-| [nvim-surround](https://github.com/kylechui/nvim-surround) | Manipular parênteses |
+| [noice.nvim](https://github.com/folke/noice.nvim) | UI de mensagens |
+| [dressing.nvim](https://github.com/stevearc/dressing.nvim) | Inputs/selects bonitos |
+| [trouble.nvim](https://github.com/folke/trouble.nvim) | Lista de diagnósticos |
+| [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) | Guias de indentação |
 | [rainbow-delimiters](https://github.com/HiPhish/rainbow-delimiters.nvim) | Parênteses coloridos |
+| [nvim-colorizer](https://github.com/NvChad/nvim-colorizer.lua) | Cores inline |
+
+### Produtividade
+| Plugin | Descrição |
+|--------|-----------|
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Sinais de Git |
+| [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) | TODO/FIX highlight |
+| [nvim-surround](https://github.com/kylechui/nvim-surround) | Manipular parênteses |
 | [persistence.nvim](https://github.com/folke/persistence.nvim) | Salvar sessões |
+| [vim-illuminate](https://github.com/RRethy/vim-illuminate) | Highlight palavras |
+| [hop.nvim](https://github.com/smoka7/hop.nvim) | Pular pra lugar |
+| [editorconfig](https://github.com/editorconfig/editorconfig-vim) | Respeitar .editorconfig |
+| [refactoring.nvim](https://github.com/ThePrimeagen/refactoring.nvim) | Refatorar código |
+| [vim-visual-multi](https://github.com/mg979/vim-visual-multi) | Múltiplos cursores |
+
+### Desenvolvimento
+| Plugin | Descrição |
+|--------|-----------|
+| [conform.nvim](https://github.com/stevearc/conform.nvim) | Formatação automática |
+| [nvim-lint](https://github.com/mfussenegger/nvim-lint) | Linting em tempo real |
+| [nvim-dap](https://github.com/mfussenegger/nvim-dap) | Debugger |
+| [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) | UI do debugger |
+| [neotest](https://github.com/nvim-neotest/neotest) | Rodar testes |
+| [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | Terminal integrado |
+
+### Git
+| Plugin | Descrição |
+|--------|-----------|
+| [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim) | Interface Git |
+
+### IA
+| Plugin | Descrição |
+|--------|-----------|
+| [copilot.lua](https://github.com/zbirenbaum/copilot.lua) | Assistente IA |
+| [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp) | Copilot no completion |
+
+### Específicos
+| Plugin | Descrição |
+|--------|-----------|
+| [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) | Preview markdown |
+| [vim-dadbod](https://github.com/tpope/vim-dadbod) | Client de banco de dados |
+| [rest.nvim](https://github.com/rest-nvim/rest.nvim) | REST client |
+| [nvim-docker](https://github.com/crispgm/nvim-docker) | Suporte Docker |
 
 ---
 
@@ -123,6 +178,14 @@ Para verificar o status dos plugins:
 ```vim
 :Lazy
 ```
+
+#### 6. Instalar formatters e linters
+
+```vim
+:Mason
+```
+
+Instale os formatters e linters necessários.
 
 ---
 
@@ -228,6 +291,60 @@ Para verificar o status dos plugins:
 | `[d` | Erro anterior |
 | `]d` | Próximo erro |
 
+### Debugger (DAP)
+
+| Atalho | Descrição |
+|--------|-----------|
+| `Espaço + dB` | Toggle breakpoint |
+| `Espaço + dc` | Continue |
+| `Espaço + di` | Step into |
+| `Espaço + do` | Step over |
+| `Espaço + dO` | Step out |
+| `Espaço + dr` | Toggle REPL |
+| `Espaço + dl` | Run last |
+| `Espaço + du` | Toggle DAP UI |
+| `Espaço + dx` | Terminate |
+
+### Testes
+
+| Atalho | Descrição |
+|--------|-----------|
+| `Espaço + tn` | Run nearest test |
+| `Espaço + tf` | Run file tests |
+| `Espaço + ta` | Run all tests |
+| `Espaço + ts` | Toggle summary |
+| `Espaço + to` | Toggle output |
+| `Espaço + tl` | Run last test |
+| `Espaço + td` | Debug nearest test |
+
+### Formatação
+
+| Atalho | Descrição |
+|--------|-----------|
+| `Espaço + cf` | Format file |
+
+### Hop
+
+| Atalho | Descrição |
+|--------|-----------|
+| `Espaço + hw` | Hop word |
+| `Espaço + hl` | Hop line |
+| `Espaço + hp` | Hop pattern |
+
+### Refactoring
+
+| Atalho | Descrição |
+|--------|-----------|
+| `Espaço + rr` | Refactor (selecionar em visual) |
+
+### REST Client
+
+| Atalho | Descrição |
+|--------|-----------|
+| `Espaço + rr` | Run request |
+| `Espaço + rl` | Run last request |
+| `Espaço + rp` | Preview request |
+
 ### Sessão
 
 | Atalho | Descrição |
@@ -263,14 +380,20 @@ Para verificar o status dos plugins:
     └── plugins/
         ├── colorscheme.lua     # Tema Catppuccin
         ├── completion.lua      # Autocompletion
+        ├── dap.lua             # Debugger
+        ├── dev-tools.lua       # Ferramentas de dev
         ├── extras.lua          # Plugins extras
         ├── extras2.lua         # Mais plugins extras
+        ├── formatting.lua      # Formatação e linting
         ├── indent.lua          # Guias de indentação
         ├── lsp.lua             # Configuração LSP
         ├── lualine.lua         # Barra de status
         ├── nvim-tree.lua       # Explorer de arquivos
+        ├── productivity.lua    # Produtividade
         ├── telescope.lua       # Busca fuzzy
-        └── treesitter.lua      # Syntax highlight
+        ├── test.lua            # Testes
+        ├── treesitter.lua      # Syntax highlight
+        └── visual.lua          # Plugins visuais
 ```
 
 ---
@@ -345,9 +468,45 @@ Instale uma [Nerd Font](https://www.nerdfonts.com/) e configure no terminal.
 :TSUpdate
 ```
 
+### Formatação não funciona
+
+```vim
+:Mason
+```
+
+Instale o formatter necessário (prettier, black, stylua, etc).
+
+### Debugger não funciona
+
+```vim
+:Mason
+```
+
+Instale o adaptador do debugger (python, node2, etc).
+
 ---
 
 ## 📝 Changelog
+
+### v2.0.0
+- Adicionado debugger (nvim-dap)
+- Adicionado testes (neotest)
+- Adicionado formatação (conform.nvim)
+- Adicionado linting (nvim-lint)
+- Adicionado refactoring
+- Adicionado hop.nvim
+- Adicionado vim-illuminate
+- Adicionado vim-visual-multi (múltiplos cursores)
+- Adicionado colorizer
+- Adicionado noice.nvim
+- Adicionado dressing.nvim
+- Adicionado markdown-preview
+- Adicionado vim-dadbod (database)
+- Adicionado rest.nvim (REST client)
+- Adicionado nvim-docker
+- Adicionado copilot.lua + copilot-cmp
+- Adicionado editorconfig
+- Removido copilot.vim (substituído por copilot.lua)
 
 ### v1.0.0
 - Configuração inicial
