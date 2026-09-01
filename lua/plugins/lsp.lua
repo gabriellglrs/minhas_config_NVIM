@@ -57,7 +57,8 @@ return {
         },
       })
 
-      local capabilities = require("cmp_nvim-lsp").default_capabilities()
+      local ok, cmp = pcall(require, "cmp_nvim_lsp")
+      local capabilities = ok and cmp.default_capabilities() or vim.lsp.protocol.make_client_capabilities()
       local servers = {
         "lua_ls",
         "ts_ls",
