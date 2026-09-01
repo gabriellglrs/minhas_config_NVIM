@@ -26,7 +26,7 @@ return {
       },
     },
     filters = { dotfiles = false },
-    git = { enable = true, ignore = false },
+    git = { enable = true, ignore = false, timeout = 800 },
     actions = {
       open_file = {
         enable = true,

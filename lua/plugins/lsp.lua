@@ -24,8 +24,8 @@ return {
         "jsonls",
         -- Python
         "pyright",
-        -- PHP
-        "phpactor",
+        -- PHP (intelephense funciona no Windows, phpactor quebra sem posix)
+        "intelephense",
         -- Java
         "jdtls",
         -- Markdown
@@ -68,7 +68,7 @@ return {
         "emmet_ls",
         "jsonls",
         "pyright",
-        "phpactor",
+        "intelephense",
         "jdtls",
         "marksman",
       }
