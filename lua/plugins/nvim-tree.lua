@@ -29,7 +29,6 @@ return {
     git = { enable = true, ignore = false, timeout = 800 },
     actions = {
       open_file = {
-        enable = true,
         window_picker = {
           enable = true,
           picker = "default",
@@ -40,7 +39,6 @@ return {
       width = 32,
       side = "left",
       preserve_window_proportions = true,
-      mouse = true,
       float = { enable = false },
     },
     update_focused_file = { enable = true, update_root = false },
