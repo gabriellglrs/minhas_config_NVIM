@@ -11,7 +11,7 @@ return {
     },
     opts = {
       extensions = {
-        nvim_tree = true,
+        nvim_tree = false,
         which_key = { auto_register = true },
         lazy_nvim = true,
       },
