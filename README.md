@@ -26,7 +26,6 @@
 ![nvim-2](https://github.com/user-attachments/assets/c7bee5a8-a9d7-4852-b8bf-a89222cc3a63)
 ![nvim-3](https://github.com/user-attachments/assets/409cd52c-9f47-4a6a-ac70-5b7236491082)
 
-> 💡 Prints em tela cheia. Tema **Catppuccin Mocha** + `lualine` + `bufferline` + `nvim-tree` + `noice`.
 
 ---
 
