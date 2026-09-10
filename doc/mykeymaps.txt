@@ -1,0 +1,154 @@
+*mykeymaps.txt*  Guia de comandos do Neovim
+
+                    GUIA DE COMANDOS
+                    ════════════════
+
+Abra este arquivo com: :MyCommands ou :mc
+
+────────────────────────────────────────
+GERAL
+────────────────────────────────────────
+  Ctrl+s          Salvar
+  :w              Salvar
+  :q              Fechar aba
+  :qa!            Fechar tudo (forçar)
+  <Esc>           Limpar busca
+  u               Desfazer
+  Ctrl+r          Refazer
+
+────────────────────────────────────────
+NAVEGAÇÃO
+────────────────────────────────────────
+  h/j/k/l         Esquerda/Baixo/Cima/Direita
+  w/b             Próxima palavra/anterior
+  0/$             Início/fim da linha
+  gg/G            Início/fim do arquivo
+  Ctrl+d/u        Meia página baixo/cima
+  n/N             Próxima/anterior busca
+  %               Ir para parêntese/chave correspondente
+
+────────────────────────────────────────
+BUSCA & TELESCOPE (Espaço + f)
+────────────────────────────────────────
+  <leader>ff      Buscar arquivo
+  <leader>fg      Buscar no conteúdo (grep)
+  <leader>fb      Listar buffers
+  <leader>fh      Ajuda
+  <leader>fc      Cores (colorscheme)
+  <leader>fk      Listar atalhos
+  <leader>fm      Marcas
+  <leader>ft      Buscar TODOs
+
+────────────────────────────────────────
+ARVORE DE ARQUIVOS (Espaço + e)
+────────────────────────────────────────
+  <leader>e       Abrir/fechar explorer
+  a               Criar arquivo/pasta
+  d               Deletar
+  r               Renomear
+  x               Cortar
+  c               Copiar
+  p               Colar
+  R               Atualizar
+
+────────────────────────────────────────
+JANELAS
+────────────────────────────────────────
+  Ctrl+h/j/k/l    Mover entre janelas
+  <leader>sv      Split vertical
+  <leader>sh      Split horizontal
+  :q              Fechar janela
+
+────────────────────────────────────────
+ABAS (BUFFERLINE)
+────────────────────────────────────────
+  Ctrl+PageUp     Aba anterior
+  Ctrl+PageDown   Próxima aba
+  <leader>bd      Fechar aba atual
+  <leader>bD      Fechar todas as abas
+  <leader>bl      Voltar pra última aba
+
+────────────────────────────────────────
+LSP (INTELIGÊNCIA)
+────────────────────────────────────────
+  K               Mostrar documentação
+  gd              Ir para definição
+  gr              Referências
+  gI              Implementação
+  <leader>ca      Code action (corrigir)
+  <leader>rn      Renomear
+  <leader>D       Tipo/definição
+  [d / ]d         Erro anterior/próximo
+
+────────────────────────────────────────
+DEBUG (DAP) (Espaço + d)
+────────────────────────────────────────
+  <leader>dB      Toggle breakpoint
+  <leader>dc      Continuar
+  <leader>di      Entrar na função
+  <leader>do      Pular função
+  <leader>dO      Sair da função
+  <leader>dx      Parar debug
+  <leader>du      Abrir/fechar UI
+
+────────────────────────────────────────
+TERMINAL (ToggleTerm)
+────────────────────────────────────────
+  Alt+t           Abrir/fechar terminal
+  <leader>tt      Terminal horizontal
+  <leader>tv      Terminal vertical
+  <leader>tf      Terminal flutuante
+  <C-\>           Toggle terminal rápido
+
+────────────────────────────────────────
+CYBERSEG - SNIPPETS (digite e aperte Tab)
+────────────────────────────────────────
+  nmap            Nmap scan completo
+  nmapfull        Nmap scan verbose
+  nmapstealth     Nmap sigiloso
+  nmapudp         Nmap UDP scan
+  nmapvuln        Nmap vulnerabilidades
+  gobuster        Directory brute force
+  ffuf            Fuzzing URL
+  sqlmap          SQL injection
+  hydra           Brute force login
+  revbash         Reverse shell bash
+  revpython       Reverse shell Python
+  enum4linux      Enumeração SMB
+  msfvenom        Criar payload
+  linpeas         Privilege escalation
+  serve           Servidor HTTP rápido
+
+────────────────────────────────────────
+SNIPPETS PYTHON
+────────────────────────────────────────
+  requests        Script requests HTTP
+  nmapscript      Script nmap Python
+  socketscanner   Scanner de portas
+
+────────────────────────────────────────
+FORMATAÇÃO
+────────────────────────────────────────
+  <leader>cf      Formatar arquivo
+  :ConformInfo    Ver formatters
+
+────────────────────────────────────────
+GIT (via terminal)
+────────────────────────────────────────
+  :terminal       Abrir terminal
+  git status      Ver status
+  git add .       Adicionar tudo
+  git commit -m   Commitar
+  git push        Enviar
+
+────────────────────────────────────────
+COMANDOS ÚTEIS NO NEOVIM
+────────────────────────────────────────
+  :Lazy           Gerenciar plugins
+  :Mason          Gerenciar LSPs
+  :TSUpdate       Atualizar syntax
+  :checkhealth    Verificar saúde
+  :verbose set   Ver configuração
+  :map <leader>   Ver todos atalhos leader
+
+vim:tw=78:ts=8:ft=help:norl:

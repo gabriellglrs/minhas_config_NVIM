@@ -1,5 +1,13 @@
 local map = vim.keymap.set
 
+-- Comando para abrir guia de comandos
+vim.api.nvim_create_user_command("MyCommands", function()
+  vim.cmd("edit " .. vim.fn.stdpath("config") .. "/doc/mykeymaps.txt")
+end, { desc = "Abrir guia de comandos" })
+vim.api.nvim_create_user_command("mc", function()
+  vim.cmd("edit " .. vim.fn.stdpath("config") .. "/doc/mykeymaps.txt")
+end, { desc = "Abrir guia de comandos (atalho)" })
+
 map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
 map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", { desc = "Grep" })
 map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Buffers" })
