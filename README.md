@@ -10,9 +10,9 @@
 
 # 💚 Minhas Config NVIM
 
-### Neovim virou IDE fullstack — rápido, lindo e pronto pra PHP • Java • JS/TS • Python • Lua
+### Neovim virou IDE fullstack — rápido, lindo e pronto pra PHP • Java • JS/TS • Python • Lua • **Cybersegurança**
 
-**lazy.nvim • LSP • Treesitter • Telescope • DAP • Neotest • Catppuccin Mocha**
+**lazy.nvim • LSP • Treesitter • Telescope • DAP • Neotest • Catppuccin Mocha • Toggleterm • Snippets de Segurança**
 
 [![Neovim](https://img.shields.io/badge/Neovim-0.10+-57A143?style=for-the-badge&logo=neovim&logoColor=white)](https://neovim.io)
 [![Lua](https://img.shields.io/badge/Lua-5.1-2C2D72?style=for-the-badge&logo=lua&logoColor=white)](https://www.lua.org)
@@ -71,6 +71,7 @@
 | 🌿 **Git** | `lazygit` (`<leader>gg`) + `gitsigns` (`+`/`~`/`_`) + `diffview` (`<leader>gd/gh`) |
 | 🖥️ **IDE** | `toggleterm` float (`Alt+t`) • `treesitter` 24 langs • `aerial` + `dropbar` breadcrumb • `ufo` folds • `flash` • `hop` • `multi-cursor` • `persistence` (sessões) • `legendary` (paleta) |
 | 🎨 **Visual** | `catppuccin mocha` • `lualine` • `bufferline` • `noice` + `dressing` + `notify` • `colorizer` • `indent-blankline` + `rainbow` • `scrollbar` • `alpha` dashboard |
+| 🔐 **Cyberseg** | `toggleterm` (terminal flutuante) + snippets para nmap, gobuster, sqlmap, hydra, reverse shells, enum4linux, metasploit |
 
 > **Leader = `Espaço`**. Quase tudo começa com `<leader>`. Aperte `<leader>fk` pra ver todos os atalhos, ou `<leader>cp` pra paleta `legendary`.
 
@@ -191,6 +192,28 @@ Depois é só usar. `:w` já formata sozinho. 🎉
 | `zR` / `zM` | abre / fecha todos folds (ufo) |
 | `<leader>cp` / `Ctrl+Shift+p` | paleta legendary 🔥 |
 | `Ctrl+l/j/k/h` (copilot) | aceita / próxima / anterior / dispensa sugestão IA |
+
+</details>
+
+<details>
+<summary><b>🔐 Cybersegurança (Snippets)</b></summary>
+
+| Snippet | Comando |
+|:---|:---|
+| `nmap` | `nmap -sV -sC -O -oN output.txt target` |
+| `nmapfull` | `nmap -A -T4 -p- -oN full_scan.txt target` |
+| `nmapstealth` | `nmap -sS -T2 -f --data-length 50` |
+| `gobuster` | `gobuster dir -u URL -w wordlist` |
+| `ffuf` | `ffuf -u URL/FUZZ -w wordlist` |
+| `sqlmap` | `sqlmap -u 'URL?id=1' --dbs --batch` |
+| `hydra` | `hydra -l user -P rockyou.txt target ssh` |
+| `revbash` | Bash reverse shell |
+| `revpython` | Python reverse shell |
+| `enum4linux` | `enum4linux -a TARGET` |
+| `msfvenom` | Template payload Metasploit |
+| `linpeas` | Download e execução LinPEAS |
+
+> Use `:h luasnip` para mais snippets. Digite o snippet e aperte Tab.
 
 </details>
 

@@ -30,7 +30,7 @@ return {
         { "<leader>f", group = "find/telescope" },
         { "<leader>g", group = "git" },
         { "<leader>d", group = "debug/dap" },
-        { "<leader>t", group = "test" },
+        { "<leader>t", group = "test/terminal" },
         { "<leader>c", group = "code/lsp" },
         { "<leader>x", group = "diagnostics/trouble" },
         { "<leader>h", group = "hop/flash" },
