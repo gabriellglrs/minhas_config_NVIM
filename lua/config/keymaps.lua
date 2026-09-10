@@ -2,11 +2,11 @@ local map = vim.keymap.set
 
 -- Comando para abrir guia de comandos
 vim.api.nvim_create_user_command("MyCommands", function()
-  vim.cmd("edit " .. vim.fn.stdpath("config") .. "/doc/mykeymaps.txt")
+  vim.cmd("edit " .. vim.fn.stdpath("config") .. "/mykeymaps.txt")
   vim.bo.filetype = "text"
 end, { desc = "Abrir guia de comandos" })
 vim.api.nvim_create_user_command("Mc", function()
-  vim.cmd("edit " .. vim.fn.stdpath("config") .. "/doc/mykeymaps.txt")
+  vim.cmd("edit " .. vim.fn.stdpath("config") .. "/mykeymaps.txt")
   vim.bo.filetype = "text"
 end, { desc = "Abrir guia de comandos (atalho)" })
 
