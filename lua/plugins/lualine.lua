@@ -12,17 +12,11 @@ return {
           {
             "mode",
             on_click = function()
-              local modes = {
-                { "n", "Normal" }, { "i", "Insert" }, { "v", "Visual" },
-                { "V", "Visual Line" }, { "\22", "Visual Block" },
-                { "c", "Command" }, { "s", "Select" }, { "R", "Replace" },
-                { "t", "Terminal" },
-              }
-              local choice = vim.fn.input("Mudar modo: (n/i/v/c/R/t): ")
-              if choice and choice ~= "" then
-                vim.cmd("stopinsert")
-                vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>" .. choice, true, false), "n", true)
-              end
+              local mode = vim.fn.mode()
+              local cycle = { n = "i", i = "v", v = "V", V = "c", c = "n" }
+              local next = cycle[mode] or "n"
+              vim.cmd("stopinsert")
+              vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>" .. next, true, true, true), "n", false)
             end,
           },
         },
