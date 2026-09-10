@@ -8,7 +8,24 @@ return {
         globalstatus = true,
       },
       sections = {
-        lualine_a = { "mode" },
+        lualine_a = {
+          {
+            "mode",
+            on_click = function()
+              local modes = {
+                { "n", "Normal" }, { "i", "Insert" }, { "v", "Visual" },
+                { "V", "Visual Line" }, { "\22", "Visual Block" },
+                { "c", "Command" }, { "s", "Select" }, { "R", "Replace" },
+                { "t", "Terminal" },
+              }
+              local choice = vim.fn.input("Mudar modo: (n/i/v/c/R/t): ")
+              if choice and choice ~= "" then
+                vim.cmd("stopinsert")
+                vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>" .. choice, true, false), "n", true)
+              end
+            end,
+          },
+        },
         lualine_b = {
           { "branch", on_click = function() vim.cmd("LazyGit") end },
           { "diff", on_click = function() vim.cmd("Gitsigns diffthis") end },
