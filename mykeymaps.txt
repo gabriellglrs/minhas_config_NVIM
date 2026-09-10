@@ -1,9 +1,7 @@
-*mykeymaps.txt*  Guia de comandos do Neovim
-
                     GUIA DE COMANDOS
                     ════════════════
 
-Abra este arquivo com: :MyCommands ou :mc
+Abra este arquivo com: :MyCommands ou :Mc
 
 ────────────────────────────────────────
 GERAL
