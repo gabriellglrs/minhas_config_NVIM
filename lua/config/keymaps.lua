@@ -4,7 +4,7 @@ local map = vim.keymap.set
 vim.api.nvim_create_user_command("MyCommands", function()
   vim.cmd("edit " .. vim.fn.stdpath("config") .. "/doc/mykeymaps.txt")
 end, { desc = "Abrir guia de comandos" })
-vim.api.nvim_create_user_command("mc", function()
+vim.api.nvim_create_user_command("Mc", function()
   vim.cmd("edit " .. vim.fn.stdpath("config") .. "/doc/mykeymaps.txt")
 end, { desc = "Abrir guia de comandos (atalho)" })
 
